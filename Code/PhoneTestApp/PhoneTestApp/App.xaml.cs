@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PhoneTestApp.Resources;
+using Windows.Phone.Speech.VoiceCommands;
 
 namespace PhoneTestApp
 {
@@ -59,9 +60,18 @@ namespace PhoneTestApp
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
-        private void Application_Launching(object sender, LaunchingEventArgs e)
+        private async void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            
+            try
+            {
+                var vcdUrl = new Uri("ms-appx:///VoiceCommandDefinition.xml", UriKind.Absolute);
+                await VoiceCommandService.InstallCommandSetsFromFileAsync(vcdUrl);
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
         // Code to execute when the application is activated (brought to foreground)

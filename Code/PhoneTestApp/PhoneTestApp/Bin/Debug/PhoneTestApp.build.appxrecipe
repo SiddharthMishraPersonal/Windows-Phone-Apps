@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LAP2010</Machine>
+    <WindowsUser>SiddharthMishra</WindowsUser>
+    <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>17c1ecf8-e603-46a6-8a23-6ea02f0921aa</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Bin\Debug\PhoneTestApp.dll">
+      <PackagePath>PhoneTestApp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\AlignmentGrid.png">
+      <PackagePath>Assets\AlignmentGrid.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\ApplicationIcon.png">
+      <PackagePath>Assets\ApplicationIcon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\BadgeLogo.png">
+      <PackagePath>Assets\BadgeLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\SquareTile150x150.png">
+      <PackagePath>Assets\SquareTile150x150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\SquareTile71x71.png">
+      <PackagePath>Assets\SquareTile71x71.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Tiles\FlipCycleTileLarge.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Tiles\FlipCycleTileMedium.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Tiles\FlipCycleTileSmall.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Tiles\IconicTileMediumLarge.png">
+      <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\Tiles\IconicTileSmall.png">
+      <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\VoiceCommandDefinition.xml">
+      <PackagePath>VoiceCommandDefinition.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\Bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
