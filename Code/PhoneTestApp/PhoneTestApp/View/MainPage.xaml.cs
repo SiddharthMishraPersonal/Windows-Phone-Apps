@@ -41,14 +41,14 @@ namespace PhoneTestApp
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
 
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            if (e.NavigationMode == NavigationMode.New)
-            {
-                var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///ContosoWidgets.xml"));
-                await Windows.Media.SpeechRecognition.VoiceCommandManager.InstallCommandSetsFromStorageFileAsync(storageFile);
-            }
-        }
+        //protected override async void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    base.OnNavigatedTo(e);
+        //    if (e.NavigationMode == NavigationMode.New)
+        //    {
+        //        var storageFile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///ContosoWidgets.xml"));
+        //        await Windows.Media.SpeechRecognition.VoiceCommandManager.InstallCommandSetsFromStorageFileAsync(storageFile);
+        //    }
+        //}
     }
 }
