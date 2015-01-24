@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <XAPFiles>
+    <File>resources.pri</File>
+    <File>MSDN Voice Search.dll</File>
+    <File>Assets\BadgeLogo.png</File>
+    <File>Assets\CancelledEarcon.wav</File>
+    <File>Assets\CortanaCircle.png</File>
+    <File>Assets\CortanaGo.png</File>
+    <File>Assets\CortanaMicrophone.png</File>
+    <File>Assets\ListeningEarcon.wav</File>
+    <File>Assets\Logo.png</File>
+    <File>Assets\MsdnLogo.png</File>
+    <File>Assets\SDK\download.png</File>
+    <File>Assets\SDK\edit.png</File>
+    <File>Assets\SDK\stop.png</File>
+    <File>Assets\SplashScreen.png</File>
+    <File>Assets\SquareTile150x150.png</File>
+    <File>Assets\SquareTile71x71.png</File>
+    <File>Assets\StoreLogo.png</File>
+    <File>Assets\WideLogo.png</File>
+    <File>VoiceCommandDefinition_8.0.xml</File>
+    <File>VoiceCommandDefinition_8.1.xml</File>
+    <File>AppManifest.xaml</File>
+    <File>Assets\SDK\microphone.png</File>
+    <File>WMAppManifest.xml</File>
+    <File>AppxManifest.xml</File>
+  </XAPFiles>
+  <APPXFiles />
+</Files>

@@ -1,0 +1,29 @@
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\MSDN Voice Search.dll
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\MSDN Voice Search.pdb
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\AppManifest.xaml
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\Properties\WMAppManifest.xml
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\App.g.cs
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MainPage.g.cs
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MSDN Voice Search.g.resources
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MSDN_Voice_Search.Resources.AppResources.resources
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MSDN Voice Search.csproj.GenerateResource.Cache
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MSDN Voice Search.dll
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MSDN Voice Search.pdb
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\XapCacheFile.xml
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\resources.pri
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\AppxManifest.xml
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\MSDN Voice Search.build.appxrecipe
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\Bin\Debug\MSDN Voice Search_Debug_AnyCPU.xap
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\priconfig.xml
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\priconfig.xml.intermediate
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\layout.resfiles
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\layout.resfiles.intermediate
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\resources.resfiles
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\resources.resfiles.intermediate
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\pri.resfiles
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\pri.resfiles.intermediate
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\qualifiers.txt
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\qualifiers.txt.intermediate
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\ProjectArchitectures.txt
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\obj\Debug\MDILProjectFiles.xml

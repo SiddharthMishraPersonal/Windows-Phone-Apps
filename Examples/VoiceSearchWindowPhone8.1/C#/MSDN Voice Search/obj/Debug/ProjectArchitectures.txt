@@ -1,0 +1,1 @@
+C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Examples\VoiceSearchWindowPhone8.1\C#\MSDN Voice Search\MSDN Voice Search.csproj;neutral
