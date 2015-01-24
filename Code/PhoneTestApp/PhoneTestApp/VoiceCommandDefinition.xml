@@ -2,13 +2,13 @@
 
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.0">
   <CommandSet xml:lang="en-US">
-    <CommandPrefix>Maths</CommandPrefix>
-    <Example> Open a Maths app to add two numbers </Example>
+    <CommandPrefix>PhoneTestApp</CommandPrefix>
+    <Example> Open to add </Example>
 
-    <Command Name="Maths">
-      <Example> first number </Example>
-      <ListenFor>[create] {dictation}</ListenFor>
-      <Feedback> entering first number... </Feedback>
+    <Command Name="Add">
+      <Example> Add two numbers </Example>
+      <ListenFor>Add {dictatedSearchTerms} and {dictatedSearchTerms}</ListenFor>
+      <Feedback> Adding two numbers... </Feedback>
       <Navigate Target="/View/MainPage.xaml"/>
     </Command>
 
@@ -40,7 +40,12 @@
       <Item> three </Item>
     </PhraseList>-->
 
-  </CommandSet>
+    <PhraseList Label="dictatedSearchTerms" >
+      <Item> one </Item>
+      <Item> two </Item>
+      <Item> three </Item>
+    </PhraseList>   
+   </CommandSet>
 </VoiceCommands>
 
 <!-- For Applications targeted at Windows Phone 8.1 -->

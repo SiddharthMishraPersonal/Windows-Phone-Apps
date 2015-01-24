@@ -24,7 +24,7 @@
   <Applications>
     <Application Id="x17c1ecf8ye603y46a6y8a23y6ea02f0921aax" Executable="AGHost.exe" EntryPoint="View\MainPage.xaml">
       <m3:VisualElements DisplayName="PhoneTestApp" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="PhoneTestApp" ForegroundText="light" BackgroundColor="#464646">
-        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png" />
+        <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\Splashscreen.png" />
       </m3:VisualElements>
       <Extensions>
@@ -36,7 +36,11 @@
       </Extensions>
     </Application>
   </Applications>
-  <Capabilities></Capabilities>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <DeviceCapability Name="microphone" />
+    <DeviceCapability Name="location" />
+  </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
