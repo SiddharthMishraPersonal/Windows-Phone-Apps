@@ -1,1 +1,0 @@
-C:\Users\SiddharthMishra\Documents\GitHub\Windows-Phone-Apps\Code\PhoneTestApp\PhoneTestApp\PhoneTestApp.csproj;neutral
