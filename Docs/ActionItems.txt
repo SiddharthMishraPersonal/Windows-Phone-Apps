@@ -1,0 +1,7 @@
+Actions:
+-Disputing a transaction
+-Submitting service request
+-Checking price
+-Simple form to associate a partner with program.
+-Quickly see payment status and take action.
+-
