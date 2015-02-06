@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Net.NetworkInformation;
+using Microsoft.WindowsAzure.MobileServices;
 
 using Windows.UI.Xaml;
 
@@ -12,8 +13,13 @@ namespace AppStudio.ViewModels
 {
     public class MainViewModel : BindableBase
     {
-       private MenuViewModel _menuModel;
+        private MenuViewModel _menuModel;
         private PrivacyViewModel _privacyModel;
+
+        //private MobileServiceCollection<TodoItem, TodoItem> items;
+        //private IMobileServiceTable<TodoItem> todoTable = App.MobileService.GetTable<TodoItem>();
+        ////private IMobileServiceSyncTable<TodoItem> todoTable = App.MobileService.GetSyncTable<TodoItem>(); // offline sync
+
 
         private ViewModelBase _selectedItem = null;
 
@@ -22,8 +28,38 @@ namespace AppStudio.ViewModels
             _selectedItem = MenuModel;
             _privacyModel = new PrivacyViewModel();
 
+          
+
         }
- 
+
+        //private async Task RefreshTodoItems()
+        //{
+        //    MobileServiceInvalidOperationException exception = null;
+        //    try
+        //    {
+        //        // This code refreshes the entries in the list view by querying the TodoItems table.
+        //        // The query excludes completed TodoItems
+        //        items = await todoTable
+        //            .Where(todoItem => todoItem.Complete == false)
+        //            .ToCollectionAsync();
+        //    }
+        //    catch (MobileServiceInvalidOperationException e)
+        //    {
+        //        exception = e;
+        //    }
+
+        //    if (exception != null)
+        //    {
+        //        await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
+        //    }
+        //    else
+        //    {
+        //        ListItems.ItemsSource = items;
+        //        this.ButtonSave.IsEnabled = true;
+        //    }
+        //}
+
+
         public MenuViewModel MenuModel
         {
             get { return _menuModel ?? (_menuModel = new MenuViewModel()); }
@@ -55,7 +91,7 @@ namespace AppStudio.ViewModels
         public Visibility AboutVisibility
         {
 
-      get { return Visibility.Collapsed; }
+            get { return Visibility.Collapsed; }
         }
 
         public void UpdateAppBar()

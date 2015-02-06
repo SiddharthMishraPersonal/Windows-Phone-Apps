@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Background;
+using Microsoft.WindowsAzure.MobileServices;
 
 using AppStudio.Views;
 using AppStudio.Services;
@@ -31,6 +32,15 @@ namespace AppStudio
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
+
+
+        // This MobileServiceClient has been configured to communicate with your Mobile Service's url
+        // and application key. You're all set to start working with your Mobile Service!
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+            "https://channel-connect.azure-mobile.net/",
+            "mgDihocRysIbjqVRHNOBOpIMSnknlT45"
+        );
+
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
