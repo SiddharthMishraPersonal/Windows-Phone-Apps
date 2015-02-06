@@ -13,6 +13,8 @@ using Autofac;
 using Autofac.Core;
 using Microsoft.WindowsAzure.MobileServices;
 using PhoneTestApp.Autofac;
+using Windows.Networking.PushNotifications;
+using Windows.UI.Popups;
 
 namespace PhoneTestApp
 {
@@ -73,7 +75,17 @@ namespace PhoneTestApp
             var container = builder.Build();
 
         }
-        
+
+        private async void InitNotificationsAsync()
+        {
+            // Request a push notification channel.
+            var channel =
+                await PushNotificationChannelManager
+                    .CreatePushNotificationChannelForApplicationAsync();
+
+            // Register for notifications using the new channel
+            await MobileService.GetPush().RegisterNativeAsync(channel.Uri);
+        }
 
         // Code to execute when the application is launching (eg, from Start)
         // This code will not execute when the application is reactivated
@@ -81,8 +93,10 @@ namespace PhoneTestApp
         {
             try
             {
+                
                 var vcdUrl = new Uri("ms-appx:///VoiceCommandDefinition.xml", UriKind.Absolute);
                 await VoiceCommandService.InstallCommandSetsFromFileAsync(vcdUrl);
+
             }
             catch (Exception)
             {
@@ -96,7 +110,7 @@ namespace PhoneTestApp
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
-
+            InitNotificationsAsync();
         }
 
         // Code to execute when the application is deactivated (sent to background)

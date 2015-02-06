@@ -1,15 +1,17 @@
 ﻿using PhoneTestApp.Helper;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Microsoft.WindowsAzure.MobileServices;
 using PhoneTestApp.Model;
-using System.Reactive.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Windows.Controls;
+using Observable = System.Reactive.Linq.Observable;
+using Unit = System.Reactive.Unit;
 
 namespace PhoneTestApp.ViewModel
 {
@@ -25,10 +27,13 @@ namespace PhoneTestApp.ViewModel
         private string _partnerName;
         private string _partnerRole;
         private string _partnerSubsidiary;
+        
 
         #endregion
 
         #region Public Properties
+
+        public ObservableCollection<EmployeeMaster> EmployeeCollection { get; set; }
 
         public string PartnerName
         {
@@ -76,6 +81,7 @@ namespace PhoneTestApp.ViewModel
         public MainApplicationViewModel()
         {
             Initialize();
+            SyncEmployees();
         }
 
         private async void Initialize()
@@ -172,6 +178,22 @@ namespace PhoneTestApp.ViewModel
                 //ListItems.ItemsSource = items;
                 //this.ButtonSave.IsEnabled = true;
             }
+        }
+
+        #endregion
+
+        #region Generate Method
+
+        private void SyncEmployees()
+        {
+            var observableEmployees = Observable.Generate(Unit.Default, x => true, x => x, x => x,
+                x => new TimeSpan(0, 0, 0, 1));
+            var subscribeMethod = observableEmployees.Subscribe(OnNext);
+        }
+
+        private void OnNext(Unit unit)
+        {
+            RefreshEmployees();
         }
 
         #endregion
