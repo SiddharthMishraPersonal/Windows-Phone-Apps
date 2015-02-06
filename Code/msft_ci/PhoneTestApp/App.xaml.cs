@@ -9,7 +9,10 @@ using Microsoft.Phone.Shell;
 using PhoneTestApp.Resources;
 using Windows.Phone.Speech.VoiceCommands;
 using Windows.Phone.Speech.Recognition;
+using Autofac;
+using Autofac.Core;
 using Microsoft.WindowsAzure.MobileServices;
+using PhoneTestApp.Autofac;
 
 namespace PhoneTestApp
 {
@@ -64,7 +67,11 @@ namespace PhoneTestApp
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
-           
+
+            var builder = new ContainerBuilder();
+            builder.RegisterModule<ModuleRegistration>();
+            var container = builder.Build();
+
         }
         
 

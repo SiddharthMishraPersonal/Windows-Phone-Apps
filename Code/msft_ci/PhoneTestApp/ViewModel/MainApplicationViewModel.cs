@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using PhoneTestApp.Model;
 using System.Reactive.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Controls;
 
 namespace PhoneTestApp.ViewModel
 {
@@ -18,7 +19,9 @@ namespace PhoneTestApp.ViewModel
 
         private MobileServiceCollection<EmployeeMaster, EmployeeMaster> _items;
         private IMobileServiceTable<EmployeeMaster> _employees = App.MobileService.GetTable<EmployeeMaster>();
-        
+
+        //private MainPage _view;
+
         private string _partnerName;
         private string _partnerRole;
         private string _partnerSubsidiary;
@@ -64,10 +67,15 @@ namespace PhoneTestApp.ViewModel
 
         #region Constructors
 
+        //public MainApplicationViewModel(MainPage view)
+        //{
+        //    _view = view;
+        //    Initialize();
+        //}
+
         public MainApplicationViewModel()
         {
             Initialize();
-
         }
 
         private async void Initialize()
