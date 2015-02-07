@@ -10,7 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace AppStudio
+namespace channel_connect
 {
     /// <summary>
     /// NavigationManager aids in navigation between pages.  It provides commands used to 

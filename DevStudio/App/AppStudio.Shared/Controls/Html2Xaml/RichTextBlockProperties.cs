@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Markup;
 
-namespace AppStudio.Controls.Html2Xaml
+namespace channel_connect.Controls.Html2Xaml
 {
     /// <summary>
     /// Usage: 

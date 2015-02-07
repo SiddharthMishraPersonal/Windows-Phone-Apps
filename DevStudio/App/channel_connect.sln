@@ -2,15 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppStudio", "AppStudio", "{9CFEE3E7-FF6B-4239-ADFA-0C5E1CB13CDD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "channel_connect", "channel_connect", "{9CFEE3E7-FF6B-4239-ADFA-0C5E1CB13CDD}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AppStudio.Shared", "AppStudio.Shared\AppStudio.Shared.shproj", "{FE43A78E-E28E-49B0-AFA7-3443BCE468AA}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "channel_connect.Shared", "AppStudio.Shared\channel_connect.Shared.shproj", "{FE43A78E-E28E-49B0-AFA7-3443BCE468AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppStudio.Windows", "AppStudio.Windows\AppStudio.Windows.csproj", "{D2F21B70-82B4-4417-8FD0-2D36CB3E6933}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "channel_connect.Windows", "AppStudio.Windows\channel_connect.Windows.csproj", "{D2F21B70-82B4-4417-8FD0-2D36CB3E6933}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppStudio.WindowsPhone", "AppStudio.WindowsPhone\AppStudio.WindowsPhone.csproj", "{DD5AF811-9E3E-4911-BF59-E34C690D3BE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "channel_connect.WindowsPhone", "AppStudio.WindowsPhone\channel_connect.WindowsPhone.csproj", "{DD5AF811-9E3E-4911-BF59-E34C690D3BE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppStudio.Data", "AppStudio.Data\AppStudio.Data.csproj", "{3FA3DD65-FC96-413B-A6D0-ECFEFBC2ED58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "channel_connect.Data", "AppStudio.Data\channel_connect.Data.csproj", "{3FA3DD65-FC96-413B-A6D0-ECFEFBC2ED58}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{697797FB-9E8B-40E3-8D38-FEDFF900589A}"
 	ProjectSection(SolutionItems) = preProject

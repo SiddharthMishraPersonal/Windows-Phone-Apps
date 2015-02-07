@@ -1,8 +1,9 @@
-using AppStudio.Data;
+using channel_connect.Data;
 using System;
 using Windows.ApplicationModel;
+using AppStudio.Data;
 
-namespace AppStudio.ViewModels
+namespace channel_connect.ViewModels
 {
     public class PrivacyViewModel : BindableBase
     {

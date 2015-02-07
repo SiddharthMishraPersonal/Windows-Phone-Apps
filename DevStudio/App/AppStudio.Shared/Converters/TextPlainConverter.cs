@@ -4,9 +4,9 @@ using System.Globalization;
 
 using Windows.UI.Xaml.Data;
 
-using AppStudio.Data;
+using channel_connect.Data;
 
-namespace AppStudio.Controls
+namespace channel_connect.Controls
 {
     public class TextPlainConverter : IValueConverter
     {

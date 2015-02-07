@@ -1,9 +1,9 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controls="using:AppStudio.Controls"
-    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
-    xmlns:commands="using:AppStudio.Commands">
+    xmlns:controls="using:channel_connect.Controls"
+    xmlns:html2xaml="using:channel_connect.Controls.Html2Xaml"
+    xmlns:commands="using:channel_connect.Commands">
 
     <!-- ListPhotoLeft -->
     <DataTemplate x:Key="CustomersList">

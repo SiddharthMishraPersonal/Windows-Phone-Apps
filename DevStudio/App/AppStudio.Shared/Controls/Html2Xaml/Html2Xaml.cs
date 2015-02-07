@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using HtmlAgilityPack;
 
-namespace AppStudio.Controls.Html2Xaml
+namespace channel_connect.Controls.Html2Xaml
 {
     public class Html2Xaml
     {

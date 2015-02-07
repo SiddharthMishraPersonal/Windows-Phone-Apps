@@ -1,12 +1,12 @@
 using System;
 using System.Net;
-using AppStudio;
+using channel_connect;
 using Windows.System;
 
-using AppStudio.Views;
-using AppStudio.ViewModels;
+using channel_connect.Views;
+using channel_connect.ViewModels;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     public class NavigationServices
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     public class TileServices
     {

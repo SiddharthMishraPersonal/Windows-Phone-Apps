@@ -2,7 +2,7 @@ using System;
 
 using Windows.ApplicationModel;
 
-namespace AppStudio.ViewModels
+namespace channel_connect.ViewModels
 {
     public class AboutThisAppViewModel
     {
@@ -10,7 +10,7 @@ namespace AppStudio.ViewModels
         {
             get
             {
-                return "AppStudio";
+                return "channel_connect";
             }
         }
 

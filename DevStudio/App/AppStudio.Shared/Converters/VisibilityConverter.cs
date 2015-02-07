@@ -5,7 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace AppStudio.Controls
+namespace channel_connect.Controls
 {
     public class VisibilityConverter : IValueConverter
     {

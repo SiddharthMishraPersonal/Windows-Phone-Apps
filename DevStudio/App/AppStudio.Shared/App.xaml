@@ -1,13 +1,13 @@
 <Application
-    x:Class="AppStudio.App"
+    x:Class="channel_connect.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AppStudio"
-    xmlns:controls="using:AppStudio.Controls"
-    xmlns:common="using:AppStudio.Common"
+    xmlns:local="using:channel_connect"
+    xmlns:controls="using:channel_connect.Controls"
+    xmlns:common="using:channel_connect.Common"
     xmlns:localData="using:Shared"
-    xmlns:html2xaml="using:AppStudio.Controls.Html2Xaml"
-    xmlns:commands="using:AppStudio.Commands">
+    xmlns:html2xaml="using:channel_connect.Controls.Html2Xaml"
+    xmlns:commands="using:channel_connect.Commands">
 
   <!--Application Resources-->
   <Application.Resources>

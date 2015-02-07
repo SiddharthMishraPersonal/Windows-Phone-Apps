@@ -1,8 +1,8 @@
 using System;
 using System.Net.NetworkInformation;
 
-using AppStudio.Services;
-using AppStudio.ViewModels;
+using channel_connect.Services;
+using channel_connect.ViewModels;
 
 using Windows.ApplicationModel.DataTransfer;
 using Windows.UI.ViewManagement;
@@ -10,7 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace AppStudio.Views
+namespace channel_connect.Views
 {
     public sealed partial class CustomersDetail : Page
     {

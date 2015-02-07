@@ -2,7 +2,7 @@
 using System.Net.NetworkInformation;
 using Windows.Networking.Connectivity;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public static class InternetConnection
     {

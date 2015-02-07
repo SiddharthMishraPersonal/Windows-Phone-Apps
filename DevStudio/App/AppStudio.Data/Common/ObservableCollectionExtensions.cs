@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public static class ObservableCollectionExtensions
     {

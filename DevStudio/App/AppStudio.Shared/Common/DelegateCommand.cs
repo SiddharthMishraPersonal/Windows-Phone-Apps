@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace AppStudio
+namespace channel_connect
 {
     /// <summary>
     /// Basic ICommand implementation

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Input;
 
-using AppStudio.Services;
+using channel_connect.Services;
 
-namespace AppStudio
+namespace channel_connect
 {
     public class ActionCommands
     {

@@ -5,8 +5,9 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using AppStudio.Data;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public abstract class DataSourceBase<T> where T : BindableSchemaBase
     {

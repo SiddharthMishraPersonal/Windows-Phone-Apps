@@ -4,7 +4,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
-namespace AppStudio.Controls
+namespace channel_connect.Controls
 {
     public class IncreaseConverter : IValueConverter
     {

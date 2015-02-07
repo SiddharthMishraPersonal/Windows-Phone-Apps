@@ -6,11 +6,11 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public class ServiceDataProvider
     {
-        const string DATASERVICES_URL_PATTERN = "http://ds.winappstudio.com/api/data/collection?dataRowListId={0}";
+        const string DATASERVICES_URL_PATTERN = "http://ds.winchannel_connect.com/api/data/collection?dataRowListId={0}";
 
         private Uri _uri;
 

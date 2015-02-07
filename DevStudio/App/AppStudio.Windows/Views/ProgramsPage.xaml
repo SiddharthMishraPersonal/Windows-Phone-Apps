@@ -1,13 +1,13 @@
 <Page
-    x:Class="AppStudio.Views.ProgramsPage"
+    x:Class="channel_connect.Views.ProgramsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:AppStudio.Views"
-     xmlns:controls="using:AppStudio.Controls"
+    xmlns:local="using:channel_connect.Views"
+     xmlns:controls="using:channel_connect.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:commands="using:AppStudio.Commands"
-    xmlns:vm="using:AppStudio.ViewModels"
+    xmlns:commands="using:channel_connect.Commands"
+    xmlns:vm="using:channel_connect.ViewModels"
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource AppBackground}">

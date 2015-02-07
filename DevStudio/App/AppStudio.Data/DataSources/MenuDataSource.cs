@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public class MenuDataSource : DataSourceBase<MenuSchema>
     {

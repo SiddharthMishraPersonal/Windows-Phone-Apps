@@ -1,4 +1,4 @@
-﻿namespace AppStudio.Data
+﻿namespace channel_connect.Data
 {
     public interface ISyncItem<T>
     {

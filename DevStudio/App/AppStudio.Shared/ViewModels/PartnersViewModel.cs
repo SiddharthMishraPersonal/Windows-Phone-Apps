@@ -5,10 +5,10 @@ using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-using AppStudio.Services;
-using AppStudio.Data;
+using channel_connect.Services;
+using channel_connect.Data;
 
-namespace AppStudio.ViewModels
+namespace channel_connect.ViewModels
 {
     public class PartnersViewModel : ViewModelBase<PartnersSchema>
     {

@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-
+using AppStudio.Data;
 using Newtonsoft.Json;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public class AppCache
     {

@@ -4,7 +4,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace AppStudio.Views
+namespace channel_connect.Views
 {
     public sealed partial class ImageViewer : Page
     {

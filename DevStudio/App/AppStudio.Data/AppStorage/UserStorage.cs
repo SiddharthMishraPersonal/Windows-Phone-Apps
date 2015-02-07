@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using PCLStorage;
 
-namespace AppStudio
+namespace channel_connect
 {
     public class UserStorage
     {

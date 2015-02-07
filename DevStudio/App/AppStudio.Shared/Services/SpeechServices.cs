@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Windows.Media.SpeechSynthesis;
 using Windows.UI.Xaml.Controls;
 
-using AppStudio.Data;
+using channel_connect.Data;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     public static class SpeechServices
     {

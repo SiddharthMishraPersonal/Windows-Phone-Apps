@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Windows.Storage;
 using Windows.Storage.Streams;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public class StaticDataProvider
     {

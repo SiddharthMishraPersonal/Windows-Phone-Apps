@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Windows.System;
 using Windows.Devices.Geolocation;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     static public class NokiaMapsServices
     {

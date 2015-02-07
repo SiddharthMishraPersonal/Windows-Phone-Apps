@@ -3,7 +3,7 @@ using System.Windows;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     public class ProgramsDataSource : DataSourceBase<ProgramsSchema>
     {

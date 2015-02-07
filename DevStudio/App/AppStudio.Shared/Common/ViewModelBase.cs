@@ -8,11 +8,11 @@ using System.Net.NetworkInformation;
 using Windows.UI.Xaml;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Storage.Streams;
-
 using AppStudio.Data;
-using AppStudio.Services;
+using channel_connect.Data;
+using channel_connect.Services;
 
-namespace AppStudio.ViewModels
+namespace channel_connect.ViewModels
 {
     public enum ViewTypes
     {

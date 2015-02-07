@@ -1,6 +1,8 @@
 using System;
+using AppStudio.Data;
+using channel_connect.Data;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     /// <summary>
     /// Implementation of the MenuSchema class.

@@ -1,10 +1,9 @@
 using System;
 
 using Windows.UI.Xaml.Controls;
+using channel_connect.ViewModels;
 
-using AppStudio.ViewModels;
-
-namespace AppStudio.Views
+namespace channel_connect.Views
 {
     public sealed partial class PrivacyFlyout : SettingsFlyout
     {

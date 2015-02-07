@@ -4,7 +4,7 @@ using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace AppStudio.Controls
+namespace channel_connect.Controls
 {
     public class VariableSizedGrid : GridView
     {

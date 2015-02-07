@@ -4,7 +4,7 @@ using System.Net;
 
 using HtmlAgilityPack;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     static public class Utility
     {

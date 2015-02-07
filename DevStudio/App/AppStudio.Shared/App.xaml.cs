@@ -10,8 +10,8 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Background;
 using Microsoft.WindowsAzure.MobileServices;
 
-using AppStudio.Views;
-using AppStudio.Services;
+using channel_connect.Views;
+using channel_connect.Services;
 
 #if WINDOWS_APP
 using Windows.UI.ApplicationSettings;
@@ -20,7 +20,7 @@ using Windows.UI.ApplicationSettings;
 using Windows.Phone.UI.Input;
 #endif
 
-namespace AppStudio
+namespace channel_connect
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

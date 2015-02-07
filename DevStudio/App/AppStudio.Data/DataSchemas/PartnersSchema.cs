@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
+using AppStudio.Data;
 using Newtonsoft.Json;
 
-namespace AppStudio.Data
+namespace channel_connect.Data
 {
     /// <summary>
     /// Implementation of the PartnersSchema class.

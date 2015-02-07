@@ -8,8 +8,8 @@
     <ProjectGuid>{3FA3DD65-FC96-413B-A6D0-ECFEFBC2ED58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AppStudio.Data</RootNamespace>
-    <AssemblyName>AppStudio.Data</AssemblyName>
+    <RootNamespace>channel_connect.Data</RootNamespace>
+    <AssemblyName>channel_connect.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
     <DefaultLanguage>en-US</DefaultLanguage>

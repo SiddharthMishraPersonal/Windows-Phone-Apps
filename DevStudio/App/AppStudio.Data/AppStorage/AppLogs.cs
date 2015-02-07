@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace AppStudio
+namespace channel_connect
 {
     public class AppLogs
     {

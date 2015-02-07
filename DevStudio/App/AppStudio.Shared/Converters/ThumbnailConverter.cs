@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace AppStudio.Controls
+namespace channel_connect.Controls
 {
     public class ThumbnailConverter : IValueConverter
     {

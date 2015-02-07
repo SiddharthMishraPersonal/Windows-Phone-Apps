@@ -2,7 +2,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace AppStudio.Commands
+namespace channel_connect.Commands
 {
     public class ItemClickCommand
     {

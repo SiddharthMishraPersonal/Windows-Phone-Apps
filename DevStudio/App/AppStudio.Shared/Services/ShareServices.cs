@@ -2,7 +2,7 @@
 
 using Windows.ApplicationModel.DataTransfer;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     public class ShareServices : IDisposable
     {

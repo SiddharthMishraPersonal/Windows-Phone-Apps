@@ -4,11 +4,12 @@ using System.Windows.Input;
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using channel_connect;
+using channel_connect.Services;
+using channel_connect.Data;
+using channel_connect.Services;
 
-using AppStudio.Services;
-using AppStudio.Data;
-
-namespace AppStudio.ViewModels
+namespace channel_connect.ViewModels
 {
     public class ProgramsViewModel : ViewModelBase<ProgramsSchema>
     {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 using Windows.System;
 
-namespace AppStudio.Services
+namespace channel_connect.Services
 {
     static public class NokiaMusicServices
     {

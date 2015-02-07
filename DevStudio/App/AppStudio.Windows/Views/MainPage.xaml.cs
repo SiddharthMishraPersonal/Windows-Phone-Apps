@@ -8,10 +8,10 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Background;
 
-using AppStudio.Services;
-using AppStudio.ViewModels;
+using channel_connect.Services;
+using channel_connect.ViewModels;
 
-namespace AppStudio.Views
+namespace channel_connect.Views
 {
     public sealed partial class MainPage : Page
     {
