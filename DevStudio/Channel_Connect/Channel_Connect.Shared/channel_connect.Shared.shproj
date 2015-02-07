@@ -9,6 +9,6 @@
   <PropertyGroup>
     <RootNamespace>AppStudio</RootNamespace>
   </PropertyGroup>
-  <Import Project="AppStudio.Shared.projitems" Label="Shared" />
+  <Import Project="Channel_Connect.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\CodeSharing\Microsoft.CodeSharing.CSharp.targets" />
 </Project>
