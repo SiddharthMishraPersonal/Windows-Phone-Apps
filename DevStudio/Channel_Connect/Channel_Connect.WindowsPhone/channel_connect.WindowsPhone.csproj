@@ -233,7 +233,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppStudio.Data\channel_connect.Data.csproj">
+    <ProjectReference Include="..\Channel_Connect.Data\channel_connect.Data.csproj">
       <Project>{3fa3dd65-fc96-413b-a6d0-ecfefbc2ed58}</Project>
       <Name>channel_connect.Data</Name>
     </ProjectReference>
@@ -241,7 +241,7 @@
   <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
   </PropertyGroup>
-  <Import Project="..\AppStudio.Shared\AppStudio.Shared.projitems" Label="Shared" />
+  <Import Project="..\Channel_Connect.Shared\Channel_Connect.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\$(TargetPlatformVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
