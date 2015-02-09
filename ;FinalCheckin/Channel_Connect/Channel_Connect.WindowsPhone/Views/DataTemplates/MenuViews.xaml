@@ -1,0 +1,50 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:commands="using:channel_connect.Commands"
+                    xmlns:controls="using:channel_connect.Controls"
+                    xmlns:html2xaml="using:channel_connect.Controls.Html2Xaml">
+
+    <!--  MenuGridPhoto  -->
+    <DataTemplate x:Key="MenuList">
+        <GridView MinWidth="360"
+                  HorizontalAlignment="Left"
+                  IsItemClickEnabled="True"
+                  IsSwipeEnabled="False"
+                  ItemTemplate="{StaticResource MenuItem}"
+                  ItemsSource="{Binding Items}"
+                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                  SelectionMode="None"
+                  commands:ItemClickCommand.Command="{Binding ItemClickCommand}" />
+    </DataTemplate>
+
+
+    <!--  MenuGridPhoto Item  -->
+    <DataTemplate x:Key="MenuItem">
+        <Grid Width="160"
+              Height="160"
+              Margin="0,0,12,12">
+            <Grid.Background>
+                <SolidColorBrush Opacity="0.7" Color="Black" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image Margin="12"
+                   Source="{Binding Icon,
+                                    Converter={StaticResource ThumbnailConverter},
+                                    ConverterParameter=180}"
+                   Stretch="Uniform" />
+            <TextBlock Grid.Row="1"
+                       Height="40"
+                       Margin="12"
+                       Style="{StaticResource MenuItemSmallText}"
+                       Text="{Binding Title,
+                                      Converter={StaticResource TextPlainConverter},
+                                      ConverterParameter=140}" />
+        </Grid>
+    </DataTemplate>
+
+
+</ResourceDictionary>
