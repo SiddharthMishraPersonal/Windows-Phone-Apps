@@ -1,0 +1,34 @@
+{
+  "Items": [
+    {
+      "Type": "Section",
+      "Title": "Partners",
+      "Icon": "/Assets/DataImages/contactinfo.png",
+      "Target": "PartnersPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Customers",
+      "Icon": "/Assets/DataImages/contactpresence.png",
+      "Target": "CustomersPage"
+    },
+    {
+      "Type": "Section",
+      "Title": "Transactions",
+      "Icon": "/Assets/DataImages/calendarweek.png",
+      "Target": "TransactionsPage"
+    },
+    {
+        "Type": "Section",
+        "Title": "Programs",
+        "Icon": "/Assets/DataImages/dockbottom.png",
+        "Target": "ProgramsPage"
+    },
+     {
+      "Type": "Section",
+      "Title": "Chats",
+      "Icon": "/Assets/DataImages/dockbottom.png",
+      "Target": "TransactionChat"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+using System;
+using System.Windows;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Windows.Web.Http;
+using channel_connect.Data.DataSchemas;
+using Microsoft.WindowsAzure.MobileServices;
+
+namespace channel_connect.Data
+{
+    public class TransactionsDataSource : DataSourceBase<getpartnertransactions>
+    {
+        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient channel_connectClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+    "https://channel-connect.azure-mobile.net/",
+    "mgDihocRysIbjqVRHNOBOpIMSnknlT45");
+
+        private MobileServiceCollection<PartnerTransactions, PartnerTransactions> _transactionses;
+        private IMobileServiceTable<PartnerTransactions> _transactionServiceTable = channel_connectClient.GetTable<PartnerTransactions>();
+        private IMobileServiceTable<ProgramMaster> _programMasterTable = channel_connectClient.GetTable<ProgramMaster>();
+        private IMobileServiceTable<ProductMaster> _productMasterTable = channel_connectClient.GetTable<ProductMaster>();
+        private IMobileServiceTable<PartnerEmployeeMaster> _partnerEmployeeMasterTable =
+            channel_connectClient.GetTable<PartnerEmployeeMaster>();
+        private IMobileServiceTable<PartnerMaster> _partnerMasterTable =
+            channel_connectClient.GetTable<PartnerMaster>();
+
+
+        private const string _appId = "0371a008-9a6c-4f3f-b3d5-3e818dcd181e";
+        private const string _dataSourceName = "6a5df094-7149-4082-a9eb-4d9389b05047";
+
+        protected override string CacheKey
+        {
+            get { return "TransactionsDataSource"; }
+        }
+
+        public override bool HasStaticData
+        {
+            get { return false; }
+        }
+
+        public async override Task<IEnumerable<getpartnertransactions>> LoadDataAsync()
+        {
+            try
+            {
+                //var programMasterTable = channel_connectClient.GetTable<ProgramMaster>();
+                //var programMasterList = programMasterTable.ToCollectionAsync();
+                //var productMasterTable = channel_connectClient.GetTable<ProductMaster>();
+                //var productMasterList = productMasterTable.ToCollectionAsync().Result;
+
+                var _viewTransaction = await channel_connectClient.InvokeApiAsync<getpartnertransactions[]>("getpartnertransactions", System.Net.Http.HttpMethod.Get, null);
+                
+                //var productList = await _productMasterTable.ToCollectionAsync();
+                //var programList = await _programMasterTable.ToCollectionAsync();
+                //var transactionList = await _transactionServiceTable.ToCollectionAsync();
+                //var partnerEmployeeList = await _partnerEmployeeMasterTable.ToCollectionAsync();
+                //var partnerList = await _partnerMasterTable.ToCollectionAsync();
+
+                //foreach (var partnerTransactionse in transactionList)
+                //{
+                //    var program = programList.FirstOrDefault(s => s.Id.Equals(partnerTransactionse.IncentiveProgramId));
+                //    var product = productList.FirstOrDefault(s => s.Id.Equals(partnerTransactionse.ProductId));
+                //    var partnerEmployee =
+                //        partnerEmployeeList.FirstOrDefault(s => s.Id.Equals(partnerTransactionse.PartnerEmployeeAccountId));
+                //    var partner = partnerList.FirstOrDefault(s => s.Id.Equals(partnerEmployee.PartnerId));
+
+                //    partnerTransactionse.ProgramMaster = program;
+                //    partnerTransactionse.ProductMaster = product;
+                //    partnerTransactionse.PartnerMaster = partner;
+                //}
+                var list = _viewTransaction.AsEnumerable();
+                return list;
+
+                
+            }
+            catch (Exception ex)
+            {
+                AppLogs.WriteError("TransactionsDataSource.LoadData", ex.ToString());
+                return new getpartnertransactions[0];
+            }
+        }
+    }
+}

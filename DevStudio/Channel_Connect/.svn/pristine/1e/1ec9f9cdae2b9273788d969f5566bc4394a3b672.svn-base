@@ -1,0 +1,79 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:commands="using:channel_connect.Commands"
+                    xmlns:controls="using:channel_connect.Controls"
+                    xmlns:html2xaml="using:channel_connect.Controls.Html2Xaml">
+
+    <!--  ListPhotoLeft  -->
+    <DataTemplate x:Key="PartnersList">
+        <Grid>
+            <ListView IsItemClickEnabled="True"
+                      IsSwipeEnabled="False"
+                      ItemTemplate="{StaticResource PartnersItem}"
+                      ItemsSource="{Binding Items}"
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      SelectionMode="None"
+                      commands:ItemClickCommand.Command="{Binding ItemClickCommand}" />
+            <ProgressBar Width="380"
+                         Height="40"
+                         VerticalAlignment="Top"
+                         Foreground="White"
+                         IsIndeterminate="True"
+                         Visibility="{Binding ProgressBarVisibility}" />
+        </Grid>
+    </DataTemplate>
+
+    <!--  ListPhotoLeft Item  -->
+    <DataTemplate x:Key="PartnersItem">
+        <Grid MinWidth="340">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--<ColumnDefinition Width="140" />-->
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--<Image Grid.Row="0"
+                   Grid.Column="0"
+                   MaxHeight="110"
+                   Margin="0, 8"
+                   VerticalAlignment="Top"
+                   Source=""
+                   Stretch="UniformToFill" />-->
+
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <TextBlock Grid.Row="0"
+                           Grid.ColumnSpan="2"
+                           Margin="16, 8, 10, 0"
+                           VerticalAlignment="Center"
+                           MaxLines="2"
+                           Style="{StaticResource ItemHeaderWrapText}"
+                           Text="{Binding Name}" />
+                <TextBlock Grid.Row="1"
+                           Grid.Column="1"
+                           Margin="16, 4, 10, 0"
+                           VerticalAlignment="Top"
+                           MaxLines="3"
+                           Style="{StaticResource ItemSubheaderText}"
+                           Text="BankName" />
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
+
+    <!--  DetailMultiColumn  -->
+    <DataTemplate x:Key="Partners1DetailDetail">
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock Margin="0,16"
+                           Style="{StaticResource SubHeaderText}"
+                           Text="Detail" />
+                <RichTextBlock Margin="0,12"
+                               Style="{StaticResource Html2XamlStyle}"
+                               html2xaml:Properties.ContainsCrlf="True"
+                               html2xaml:Properties.Html="" />
+            </StackPanel>
+        </ScrollViewer>
+    </DataTemplate>
+</ResourceDictionary>

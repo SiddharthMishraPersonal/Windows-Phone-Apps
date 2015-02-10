@@ -1,0 +1,230 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+using channel_connect.Data;
+using Microsoft.WindowsAzure.MobileServices;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Xml;
+using System.Xml.Serialization;
+using channel_connect.Data.DataSchemas;
+
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
+
+namespace channel_connect.Views
+{
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class TransactionChat : Page, INotifyPropertyChanged
+    {
+        public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient channel_connectClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+    "https://channel-connect.azure-mobile.net/",
+    "mgDihocRysIbjqVRHNOBOpIMSnknlT45");
+
+        ObservableCollection<PartnerTransactions> _transaction = new ObservableCollection<PartnerTransactions>();
+
+
+        public TransactionChat()
+        {
+            DataContext = this;
+            this.InitializeComponent();
+        }
+
+
+        private int _transactionId = 0;
+
+        public int TransactionId
+        {
+            get { return _transactionId; }
+            set
+            {
+                _transactionId = value;
+                OnPropertyChanged("TransactionId");
+            }
+        }
+
+        public ObservableCollection<ChatDetails> ChatDetailList
+        {
+            get { return _chatDetails; }
+            set { _chatDetails = value; }
+        }
+
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.
+        /// This parameter is typically used to configure the page.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var transactionView = e.Parameter as getpartnertransactions;
+
+            if (transactionView != null)
+            {
+                TransactionId = transactionView.TransactionId;
+            }
+            GetData();
+
+            var observable = Observable.Generate(Unit.Default, x => true, x => x, x => x, x => TimeSpan.FromSeconds(1)).Timestamp();
+            observable.Subscribe(_ =>
+            {
+                GetData();
+            });
+        }
+
+        ObservableCollection<ChatDetails> _chatDetails = new ObservableCollection<ChatDetails>();
+
+        ObservableCollection<getpartnertransactions> _transactionCollection = new ObservableCollection<getpartnertransactions>();
+        private string _microsoftId = string.Empty;
+        private string _loginId = string.Empty;
+
+        private async void GetData()
+        {
+            //StaticDataProvider.TransactionId = TransactionId;
+            //var transactionSouce = new TransactionsDataSource();
+            //var trans = await transactionSouce.LoadDataAsync();
+
+            //_transactionCollection.AddRangeUnique(trans);
+
+            //var _partnerTransaction = _transactionCollection.FirstOrDefault();
+
+
+            var table = channel_connectClient.GetTable<TransactionChatTranscript>();
+            var items = await table.ToCollectionAsync();
+            var _partnerTransaction = items.ToList().FirstOrDefault(s => s.TransactionId.Equals(TransactionId));
+
+            
+            if (_partnerTransaction != null)
+            {
+                _microsoftId = _partnerTransaction.MicrosoftUserId;
+                _loginId = _partnerTransaction.PartnerUserId;
+
+                var chatTranscript = _partnerTransaction.ChatTranscript;
+
+                if (!string.IsNullOrEmpty(chatTranscript))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<ChatDetails>));
+                    StringReader rdr = new StringReader(chatTranscript);
+                    var chatDetailList = (List<ChatDetails>)serializer.Deserialize(rdr);
+                    _chatDetails.Clear();
+                    foreach (var chat in chatDetailList)
+                    {
+                        ChatDetailList.Add(chat);
+                    }
+                }
+            }
+        }
+
+        private async void SendChatButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                var chatText = txtChatText.Text;
+
+                var chatDetail = new ChatDetails()
+                {
+                    ChatDateTime = DateTime.Now,
+                    ChatText = chatText,
+                    IsSender = true,
+                    UserName = "username"
+                };
+
+                _chatDetails.Add(chatDetail);
+
+                var stringwriter = new System.IO.StringWriter();
+                var serializer = new XmlSerializer(typeof (List<ChatDetails>));
+                serializer.Serialize(stringwriter, _chatDetails.ToList());
+                var chatTranscript = stringwriter.ToString();
+
+                //Update to database
+                var tt = new TransactionChatTranscript();
+                tt.ChatTranscript = chatTranscript;
+                tt.MicrosoftUserId = _microsoftId;
+                tt.PartnerUserId = _loginId;
+                tt.TransactionId = _transactionId;
+                tt.Id = TransactionId;
+
+
+                //var t = await channel_connectClient.InvokeApiAsync<TransactionChat[]>("TransactionChat", System.Net.Http.HttpMethod.Put, null);
+
+                var table = channel_connectClient.GetTable<TransactionChatTranscript>();
+                var items = await table.ToCollectionAsync();
+                var item = items.ToList().FirstOrDefault(s => s.TransactionId.Equals(TransactionId));
+                if (item == null)
+                {
+                    await table.InsertAsync(tt);
+                }
+                else
+                {
+                    await table.UpdateAsync(tt);
+                }
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+            finally
+            {
+                //GetData();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
+    }
+
+    public class ChatDetails
+    {
+        private string _userName;
+        private string _chatText;
+        private DateTime _chatDateTime;
+        private bool _isSender;
+
+        public string UserName
+        {
+            get { return _userName; }
+            set { _userName = value; }
+        }
+
+        public string ChatText
+        {
+            get { return _chatText; }
+            set { _chatText = value; }
+        }
+
+        public DateTime ChatDateTime
+        {
+            get { return _chatDateTime; }
+            set { _chatDateTime = value; }
+        }
+
+        public bool IsSender
+        {
+            get { return _isSender; }
+            set { _isSender = value; }
+        }
+    }
+}

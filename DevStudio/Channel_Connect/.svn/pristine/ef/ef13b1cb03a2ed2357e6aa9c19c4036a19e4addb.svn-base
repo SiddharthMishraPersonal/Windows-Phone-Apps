@@ -1,0 +1,228 @@
+using System;
+using System.Collections;
+using AppStudio.Data;
+using channel_connect.Data.DataSchemas;
+using Newtonsoft.Json;
+
+namespace channel_connect.Data
+{
+    /// <summary>
+    /// Implementation of the TransactionsSchema class.
+    /// </summary>
+    public class PartnerTransactions : BindableSchemaBase, IEquatable<PartnerTransactions>, ISyncItem<PartnerTransactions>
+    {
+        private int _id;
+        private int _partnerEmployeeAccountId;
+        private DateTime _transactionDate;
+        private int _productId;
+        private ProductMaster _productMaster;
+        private int _customerId;
+        private CustomerMaster _customerMaster;
+        private int _salesPrice;
+        private int _incentiveProgramId;
+        private ProgramMaster _programMaster;
+        private DateTime _incentiveCalculationDate;
+        private int _qualifiesforIncentive;
+        private int _eligibleIncentives;
+        private int _incentivePayableStatus;
+        private DateTime _incentivePaymentDate;
+        private int _countryId;
+        private PartnerMaster _partnerMaster;
+
+        private int _noOfLicensesSold;
+        
+        //[JsonProperty("_id")]
+        //public string Id { get; set; }
+
+ 
+        
+
+        public override string DefaultTitle
+        {
+            get { return string.Empty; }
+        }
+
+        public override string DefaultSummary
+        {
+            get { return TransactionDate.ToString(); }
+        }
+
+        public override string DefaultImageUrl
+        {
+            get { return null; }
+        }
+
+        public override string DefaultContent
+        {
+            get { return TransactionDate.ToString(); }
+        }
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public DateTime TransactionDate
+        {
+            get { return _transactionDate; }
+            set { _transactionDate = value; }
+        }
+
+        public int ProductId
+        {
+            get { return _productId; }
+            set { _productId = value; }
+        }
+
+        public int CustomerId
+        {
+            get { return _customerId; }
+            set { _customerId = value; }
+        }
+
+        public int SalesPrice
+        {
+            get { return _salesPrice; }
+            set { _salesPrice = value; }
+        }
+
+        public int IncentiveProgramId
+        {
+            get { return _incentiveProgramId; }
+            set { _incentiveProgramId = value; }
+        }
+
+        public DateTime IncentiveCalculationDate
+        {
+            get { return _incentiveCalculationDate; }
+            set { _incentiveCalculationDate = value; }
+        }
+
+        public int QualifiesforIncentive
+        {
+            get { return _qualifiesforIncentive; }
+            set { _qualifiesforIncentive = value; }
+        }
+
+        public int EligibleIncentives
+        {
+            get { return _eligibleIncentives; }
+            set { _eligibleIncentives = value; }
+        }
+
+        public int IncentivePayableStatus
+        {
+            get { return _incentivePayableStatus; }
+            set { _incentivePayableStatus = value; }
+        }
+
+        public DateTime IncentivePaymentDate
+        {
+            get { return _incentivePaymentDate; }
+            set { _incentivePaymentDate = value; }
+        }
+
+        public int CountryId
+        {
+            get { return _countryId; }
+            set { _countryId = value; }
+        }
+
+        public int NoOfLicensesSold
+        {
+            get { return _noOfLicensesSold; }
+            set { _noOfLicensesSold = value; }
+        }
+        
+        public ProgramMaster ProgramMaster
+        {
+            get { return _programMaster; }
+            set { _programMaster = value; }
+        }
+
+        public CustomerMaster CustomerMaster
+        {
+            get { return _customerMaster; }
+            set { _customerMaster = value; }
+        }
+
+        public ProductMaster ProductMaster
+        {
+            get { return _productMaster; }
+            set { _productMaster = value; }
+        }
+
+        public int PartnerEmployeeAccountId
+        {
+            get { return _partnerEmployeeAccountId; }
+            set { _partnerEmployeeAccountId = value; }
+        }
+
+        public PartnerMaster PartnerMaster
+        {
+            get { return _partnerMaster; }
+            set { _partnerMaster = value; }
+        }
+
+        override public string GetValue(string fieldName)
+        {
+            if (!String.IsNullOrEmpty(fieldName))
+            {
+                switch (fieldName.ToLowerInvariant())
+                {
+                    case "customername":
+                        return String.Format("{0}", string.Empty); 
+                    case "product":
+                        return String.Format("{0}", string.Empty); 
+                    case "salesprice":
+                        return String.Format("{0}", SalesPrice); 
+                    case "partner":
+                        return String.Format("{0}", string.Empty); 
+                    case "defaulttitle":
+                        return DefaultTitle;
+                    case "defaultsummary":
+                        return DefaultSummary;
+                    case "defaultimageurl":
+                        return DefaultImageUrl;
+                    default:
+                        break;
+                }
+            }
+            return String.Empty;
+        }
+
+        public bool Equals(PartnerTransactions other)
+        {
+            if (ReferenceEquals(this, other)) return true;
+            if (ReferenceEquals(null, other)) return false;
+            return this.Id == other.Id;
+        }
+
+        public bool NeedSync(PartnerTransactions other)
+        {
+
+            return this.Id == other.Id && (this.TransactionDate != other.TransactionDate );
+        }
+
+        public void Sync(PartnerTransactions other)
+        {
+            //this.CustomerName = other.CustomerName;
+            //this.Product = other.Product;
+            //this.SalesPrice = other.SalesPrice;
+            //this.Partner = other.Partner;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as PartnerTransactions);
+        }
+
+        public override int GetHashCode()
+        {
+            return this.Id.GetHashCode();
+        }
+
+        
+    }
+}
