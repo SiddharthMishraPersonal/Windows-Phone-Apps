@@ -13,6 +13,7 @@ using channel_connect.Services;
 using channel_connect.ViewModels;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using channel_connect.Data;
 using Windows.Media.SpeechRecognition;
 using Windows.UI.Popups;
@@ -84,10 +85,33 @@ namespace channel_connect.Views
         /// in addition to page state preserved during an earlier session.
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            _dataTransferManager = DataTransferManager.GetForCurrentView();
-            _dataTransferManager.DataRequested += OnDataRequested;
-            _navigationHelper.OnNavigatedTo(e);
-            
+            await LaunchLoginProcess(e);
+        }
+
+        private async Task LaunchLoginProcess(NavigationEventArgs eventArgs)
+        {
+            LoginPage signInDialog = new LoginPage();
+            await signInDialog.ShowAsync();
+
+            if (signInDialog.Result == SignInResult.SignInOK)
+            {
+                // Sign in was successful.
+                _dataTransferManager = DataTransferManager.GetForCurrentView();
+                _dataTransferManager.DataRequested += OnDataRequested;
+                _navigationHelper.OnNavigatedTo(eventArgs);
+            }
+            else if (signInDialog.Result == SignInResult.SignInFail)
+            {
+                // Sign in failed.
+                signInDialog = new LoginPage();
+                await signInDialog.ShowAsync();
+            }
+            else if (signInDialog.Result == SignInResult.SignInCancel)
+            {
+                // Sign in was cancelled by the user.
+                signInDialog = new LoginPage();
+                await signInDialog.ShowAsync();
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -114,7 +138,7 @@ namespace channel_connect.Views
                 try
                 {
                     // Change 'MobileService' to the name of your MobileServiceClient instance.
-                    // Sign-in using Facebook authentication.
+                    // Sign-in using Live authentication.
                     user = await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.MicrosoftAccount);
 
                     message = string.Format("You are now signed in - {0}", user.UserId);
@@ -151,7 +175,7 @@ namespace channel_connect.Views
                         message = "User not found.";
                     }
                     await MainViewModel.LoadDataAsync();
-                   // PartnerHubSection.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                    // PartnerHubSection.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
                     //if (StaticDataProvider.isPartner == true)
                     //{
@@ -164,7 +188,7 @@ namespace channel_connect.Views
                     //    MicrosoftHubSection.Visibility = Windows.UI.Xaml.Visibility.Visible;
                     //}
                 }
-                catch (InvalidOperationException ex)
+                catch (InvalidOperationException)
                 {
                     message = "You must log in. Login Required";
                 }
@@ -256,14 +280,5 @@ namespace channel_connect.Views
         }
     }
 
-    public class Test
-    {
-        private int _id;
-
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
-    }
+   
 }

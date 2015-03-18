@@ -1,0 +1,29 @@
+﻿<ContentDialog x:Class="channel_connect.Views.Test"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+               xmlns:local="using:channel_connect.Views"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               Title="DIALOG TITLE"
+               PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+               PrimaryButtonText="sign in"
+               SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+               SecondaryButtonText="cancel"
+               mc:Ignorable="d">
+
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBox Name="email" Header="Email address" />
+        <PasswordBox Name="password" Header="Password" />
+        <CheckBox Name="showPassword" Content="Show password" />
+
+        <!--  Content body  -->
+        <TextBlock Name="body"
+                   Style="{StaticResource MessageDialogContentStyle}"
+                   TextWrapping="Wrap">
+            <TextBlock.Text>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </TextBlock.Text>
+        </TextBlock>
+    </StackPanel>
+</ContentDialog>

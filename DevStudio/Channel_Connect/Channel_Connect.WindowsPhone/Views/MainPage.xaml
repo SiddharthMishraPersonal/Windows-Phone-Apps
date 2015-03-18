@@ -62,7 +62,7 @@
         </Hub>
     </Grid>
 
-    <Page.BottomAppBar>
+    <!--<Page.BottomAppBar>
         <CommandBar Background="{StaticResource AppBarBackground}"
                     ClosedDisplayMode="Minimal"
                     Foreground="{StaticResource AppForegroundColor}"
@@ -98,5 +98,5 @@
                               Visibility="{Binding MainViewModel.SelectedItem.ShareItemVisibility}" />
             </CommandBar.SecondaryCommands>
         </CommandBar>
-    </Page.BottomAppBar>
+    </Page.BottomAppBar>-->
 </Page>
